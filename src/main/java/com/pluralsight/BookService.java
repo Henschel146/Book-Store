@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
@@ -13,6 +14,7 @@ import static jakarta.transaction.Transactional.TxType.SUPPORTS;
 
 @Transactional(SUPPORTS)
 @ApplicationScoped
+@Named
 public class BookService {
 
     @Inject
